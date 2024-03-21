@@ -14,6 +14,13 @@ export default function App() {
     function terminarTarefa(tarefaTerminada) {
         const novoArray = [...terminadas, tarefaTerminada];
         setTerminadas(novoArray);
+
+        if (tarefas.length - novoArray.length > 0) {
+            alert(`Agora só faltam ${tarefas.length - novoArray.length} tarefas! Uhuul!`);
+        } else {
+            alert("Você terminou tudo, parabéns!");
+        }
+
     }
 
     return (
